@@ -1,0 +1,8 @@
+gradio
+pandas
+matplotlib
+google-play-scraper
+transformers
+top2vec[sentence_encoders]
+wordcloud
+torch
