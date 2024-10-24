@@ -51,8 +51,8 @@ This project is designed to scrape Google Play Store reviews for a given app, an
    python app.py
 
 ## Usage
-   -Enter the Google Play app ID (for example, com.whatsapp for WhatsApp) in the Gradio interface.
-   -The app will:
+   - Enter the Google Play app ID (for example, com.whatsapp for WhatsApp) in the Gradio interface.
+   - The app will:
       1. Scrape the reviews.
       2. Run sentiment analysis and topic modeling.
       3. Display the sentiment bar chart, word clouds for topics, and a preview of sample reviews.
