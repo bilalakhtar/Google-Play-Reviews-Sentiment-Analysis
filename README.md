@@ -1,37 +1,41 @@
-# Google-Play-Reviews-Sentiment-Analysis
-Project Overview
-This project is a web-based tool for analyzing Google Play app reviews. It scrapes app reviews from the Google Play Store using the app's ID, performs sentiment analysis, generates word clouds for key topics, and visualizes the sentiment distribution through a bar chart. The user interface is built with Gradio, allowing users to input an app's ID and get immediate insights into customer sentiment and review topics.
+# Google Play Reviews Sentiment Analysis
 
-Features
-Scraping Reviews: Retrieves all the reviews for a given app ID from the Google Play Store. It uses the google_play_scraper library to collect the most recent reviews.
-Sentiment Analysis: Uses a fine-tuned sentiment analysis model from Hugging Face to classify reviews as positive, neutral, or negative.
-Word Cloud Generation: Utilizes the WordCloud library to create visual representations of key terms found in the app's reviews.
-Topic Modeling: Applies Top2Vec for unsupervised topic modeling to identify main themes across the reviews.
-Visualization: Generates bar charts to show the distribution of sentiments and displays word clouds for the top topics.
-Gradio Interface: The project uses Gradio to create a simple, interactive interface for users to input the app ID and view results.
-How it Works
-Scrape Reviews:
+## Overview
 
-Reviews are collected using the app ID inputted by the user. The app reviews are scraped in English and sorted by the newest first.
-Sentiment Analysis:
+This project is designed to scrape Google Play Store reviews for a given app, analyze the sentiment of those reviews, and perform topic modeling to generate insights. The application uses Gradio to provide a simple and intuitive user interface, allowing users to input the app ID and receive detailed feedback on sentiment distribution, topics, and more.
 
-The project uses a pre-trained transformer model (cardiffnlp/twitter-roberta-base-sentiment-latest) to classify each review into positive, neutral, or negative sentiments.
-The sentiment distribution is visualized as a bar chart and saved as an image.
-Word Clouds and Topic Modeling:
+## Key Features
 
-Reviews are cleaned and processed to generate word clouds based on the top terms and topics discovered using Top2Vec.
-Word clouds are created for up to 5 identified topics and saved as images.
-Gradio Interface:
+- **Scraping Reviews**: Automatically fetches reviews from the Google Play Store for a specified app ID.
+- **Sentiment Analysis**: Classifies reviews as positive, neutral, or negative using a pre-trained transformer model.
+- **Topic Modeling**: Identifies key topics in reviews using `Top2Vec`.
+- **Visualizations**: Generates bar charts for sentiment distribution and word clouds for top topics.
+- **Gradio Interface**: Simple and easy-to-use interface where users can input an app ID and view results.
 
-Users can input the Google Play app ID to start the analysis.
-The output includes:
-Scraping status (indicating success or failure).
-A sentiment distribution bar chart.
-Word clouds of the top words from topics found using topic modeling.
-A list of sample reviews for reference.
-The name of the app's developer.
-Prerequisites
-To run this project, you need the following installed:
+## How it Works
 
-Python 3.7 or higher
-Required libraries listed in requirements.txt (see below for installation instructions)
+1. **Scraping Reviews**: 
+   - Fetches reviews using the `google_play_scraper` library for a specific app based on the app ID.
+   
+2. **Sentiment Analysis**:
+   - Uses the `cardiffnlp/twitter-roberta-base-sentiment-latest` model to classify each review's sentiment.
+   - Displays sentiment distribution as a bar chart.
+
+3. **Topic Modeling**:
+   - Implements `Top2Vec` to uncover the main themes in the reviews.
+   - Generates word clouds for the top terms in each topic.
+
+4. **Gradio Interface**:
+   - Users input the app ID to get review insights, including:
+     - Scraping status
+     - Sentiment distribution
+     - Word clouds for top topics
+     - Sample reviews for reference
+     - The app's developer name
+
+## Setup and Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-repo/google-play-reviews-sentiment-analysis.git
+   cd google-play-reviews-sentiment-analysis
